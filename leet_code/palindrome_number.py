@@ -12,8 +12,9 @@ def is_palindrome1(x: int) -> bool:
         return False
 
     reverse_int = 0
+
     while x > reverse_int:
-        reverse_int += (reverse_int* 10) + x % 10
+        reverse_int = (reverse_int* 10) + x % 10
         x = int(x/10)
 
     return x == reverse_int or x == int(reverse_int/10)
